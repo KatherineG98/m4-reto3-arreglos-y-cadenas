@@ -1,4 +1,4 @@
-# � **Análisis de Cadenas de Texto**
+# 🔠 **Análisis de Cadenas de Texto**
 ## Reto Práctico Lección 3 - Arreglos y Sentencias Iterativas
 
 ***
