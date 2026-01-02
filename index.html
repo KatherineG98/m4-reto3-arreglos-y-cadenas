@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arreglos y Sentencias iterativas</title>
+  <meta name="description" content="Un programa que solicita ingresar tres nombres unidos por una coma y entrega la ubicación de cada letra en el string como si se tratara de un array + indica en qué posición de la cadena se ubican las comas.">
+  <!-- SweetAlert2 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="container">
+    <h1>Arreglos y Sentencias iterativas</h1>
+    <p class="subtitle">Reto - Lección 3 (M4)</p>
+    <div class="instrucciones">
+      <h3>📝 Instrucciones:</h3>
+      <ul>
+        <li>Haz clic en "Ingresar Nombres" para comenzar.</li>
+        <li>Ingresa 3 nombres unidos por una coma.</li>
+        <li>Recibirás la posición de cada letra en la cadena y la posición de las comas.</li>
+      </ul>
+    </div>
+
+    <button class="btn-nombres" id="btnNombres">Ingresar Nombres</button>
+
+    <div id="resultado">
+      <!-- Aquí se mostrarán los resultados dinámicamente -->
+    </div>
+
+    <button class="btn-reiniciar visually-hidden" id="btnReiniciar">Reiniciar</button>
+  </main>
+  <!-- SweetAlert2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Nuestro archivo JavaScript -->
+  <script src="./script.js"></script>
+</body>
+
+</html>

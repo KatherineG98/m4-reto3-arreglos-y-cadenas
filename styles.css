@@ -1,0 +1,310 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+:root {
+  /* Colors */
+  --c-black: hsl(0, 2%, 12%);
+  --c-neutral-900: hsl(178, 20%, 9%);
+  --c-neutral-800: hsl(178, 20%, 20%);
+  --c-neutral-700: hsl(178, 3%, 28%);
+  --c-neutral-600: hsl(178, 3%, 40%);
+  --c-neutral-400: hsl(178, 3%, 52%);
+  --c-neutral-300: hsl(178, 6%, 75%);
+  --c-neutral-200: hsl(178, 20%, 94%);
+  --c-neutral-100: hsl(0, 0%, 98%);
+  --c-peach-100: hsl(16, 100%, 96%);
+  --c-neutral-0: hsl(0, 0%, 100%);
+  --c-tqs-500: hsl(178, 66%, 41%);
+  --c-tqs-700: hsl(178, 73%, 29%);
+  --c-system-error: hsl(0, 66%, 52%);
+  /* Result state colors */
+  --c-success-bg: hsl(120, 39%, 85%);
+  --c-success-border: hsl(120, 39%, 76%);
+  --c-success-text: hsl(120, 61%, 24%);
+  --c-warning-bg: hsl(45, 100%, 90%);
+  --c-warning-border: hsl(45, 100%, 74%);
+  --c-warning-text: hsl(45, 94%, 27%);
+  --c-error-bg: hsl(354, 70%, 91%);
+  --c-error-border: hsl(354, 70%, 82%);
+  --c-error-text: hsl(354, 61%, 28%);
+  /* Where colors are used */
+  --color-main-bg: var(--c-peach-100);
+  --color-text-white: var(--c-neutral-100);
+  --color-text-light: var(--c-neutral-400);
+  --color-text-dark: var(--c-black);
+  --color-bg-white: var(--c-neutral-0);
+  --color-bg-light: var(--c-neutral-200);
+  --color-button-bg: var(--c-tqs-500);
+  --color-button-bg-hover: var(--c-tqs-700);
+  --color-border-light: var(--c-neutral-300);
+  /* Font Sizes */
+  --fs-96: 6rem;
+  --fs-52: 3.25rem;
+  --fs-48: 3rem;
+  --fs-32: 2rem;
+  --fs-28: 1.75rem;
+  --fs-24: 1.5rem;
+  --fs-20: 1.25rem;
+  --fs-18: 1.125rem;
+  --fs-16: 1rem;
+  --fs-13: 0.813rem;
+  /* Where fs are used */
+  --font-size-h1: var(--fs-48);
+  --font-size-subtitle: var(--fs-20);
+  --font-size-form-title: var(--fs-32);
+  --font-size-input-label: var(--fs-16);
+  --font-size-input: var(--fs-16);
+  --font-size-input-text: var(--fs-13);
+  --font-size-button: var(--fs-18);
+  /* Spacing */
+  --sp-borderr-out-panel: 1.25rem;
+  --sp-borderr-inner-panel: 0.625rem;
+  --sp-borderr-button: 0.625rem;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-main-bg);
+  color: var(--color-text-dark);
+  line-height: 1.2;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  width: 100%;
+  border: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.visually-hidden.skip-link:focus {
+  left: 0;
+  width: auto;
+  height: auto;
+  background-color: var(--color-main-bg);
+  color: var(--color-text-white);
+  padding: 10px;
+  border: 2px solid var(--color-text-white);
+  /* Para que sea visible en tab focus - Accesibilidad */
+}
+
+.container {
+  max-width: 780px;
+  margin: 2rem auto;
+  background-color: var(--color-bg-white);
+  padding: 2rem;
+  border-radius: var(--sp-borderr-out-panel);
+  box-shadow: 0 10px 32px rgba(214, 117, 117, 0.2);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  color: var(--c-tqs-700);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--color-text-light);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: var(--font-size-subtitle);
+}
+
+.instrucciones {
+  background-color: var(--color-bg-light);
+  padding: 1rem;
+  border-radius: var(--sp-borderr-inner-panel);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.instrucciones h3 {
+  color: var(--c-tqs-700);
+}
+
+.instrucciones ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.instrucciones ul li::marker {
+  color: var(--c-tqs-500);
+}
+
+.instrucciones li {
+  margin-bottom: .5rem;
+}
+
+.btn-nombres {
+  background-color: var(--color-button-bg);
+  color: var(--color-text-white);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: var(--font-size-button);
+  font-weight: 600;
+  border-radius: var(--sp-borderr-button);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(52, 205, 219, 0.3);
+}
+
+.btn-nombres:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-button-bg-hover);
+}
+
+.btn-nombres:active {
+  transform: translateY(0);
+}
+
+#resultado {
+  margin-top: 2rem;
+  display: none;
+  /* Oculto inicialmente */
+}
+
+.resultado-final {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  padding: 1rem;
+  background-color: var(--c-success-bg);
+  border-radius: var(--sp-borderr-inner-panel);
+  color: var(--c-success-text);
+  border: 2px solid var(--c-success-border);
+
+  hr {
+    border-color: var(--c-success-border);
+  }
+}
+
+.btn-reiniciar {
+  background-color: var(--c-neutral-400);
+  color: var(--color-text-white);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: var(--font-size-button);
+  font-weight: 600;
+  border-radius: var(--sp-borderr-button);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-reiniciar:hover {
+  background-color: var(--c-neutral-600);
+}
+
+/* SweetAlert2 Overrides & Custom Styles */
+.swal2-actions {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1.6em 1.25em !important;
+  gap: 1rem;
+  justify-content: center;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+}
+
+/* Ensure any other buttons (like deny) are hidden */
+.swal2-actions button:not(.swal2-confirm):not(.swal2-cancel) {
+  display: none !important;
+}
+
+/* Style confirm button with project colors */
+.swal2-confirm {
+  background-color: var(--color-button-bg) !important;
+}
+
+.swal2-confirm:hover {
+  background-color: var(--color-button-bg-hover) !important;
+}
+
+.swal-note-input-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 1rem;
+}
+
+.swal-note-input-row label {
+  flex: 1;
+  text-align: center;
+  font-weight: 500;
+  color: var(--c-neutral-700);
+}
+
+.swal-note-input-row input {
+  flex: 1;
+  max-width: 100%;
+}
+
+.char-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.char-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--c-neutral-300);
+  border-radius: 8px;
+  padding: 8px;
+  min-width: 36px;
+  background-color: var(--color-bg-white);
+  box-shadow: 0 2px 4px rgba(24, 99, 24, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.char-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(24, 99, 24, 0.2);
+}
+
+.char-box.comma {
+  background-color: var(--c-warning-bg);
+  border-color: var(--c-warning-border);
+  color: var(--color-text-dark);
+  font-weight: bold;
+}
+
+.char-box .char {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.char-box .index {
+  font-size: 0.75rem;
+  color: var(--c-neutral-600);
+  margin-top: 4px;
+  font-family: monospace;
+}
